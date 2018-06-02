@@ -1,0 +1,137 @@
+body,
+ul {
+    padding: 0
+}
+
+a,
+nav li {
+    display:block; 
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+a {
+    color: #fff;
+    text-decoration: none
+}
+
+.image-gallery li:hover h3,
+a:hover {
+    text-decoration: underline
+}
+
+header {
+    background: #a00
+}
+footer > nav >ul{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: flex-start;
+    width:100%;
+}
+
+footer {
+    background: #333;
+    clear: both
+}
+
+ul {
+    list-style: none
+}
+
+nav ul {
+    margin: 0;
+    padding: 20px 10px;
+    font-size: 20px
+}
+
+nav li a {
+    padding-right: 20px
+}
+
+footer nav,
+header nav,
+section {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+.image-gallery li {
+    text-align: center;
+    margin: 25px;
+}
+
+
+.image-gallery li:hover img {
+    border: 2px solid #333;
+    display: block;
+    margin: 0 auto
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+header > nav >ul{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    width:100%;
+}
+
+@media screen and (min-width: 550px){
+    header > nav >ul{
+        flex-direction: row; 
+    }
+}
+
+@media screen and (max-width: 550px){
+    header > nav >ul{
+        flex-direction: column;
+    }
+    .cell1{
+       order: 3;
+    }
+    .cell2, .cell3{
+       order: 1;
+    }
+    .cell4 {
+        order: 99;
+    }
+}
+
+@media screen and (max-width: 550px){
+    footer > nav >ul{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 550px){
+    footer > nav >ul{
+        flex-direction: row; 
+    }
+    .fcell1{
+        order:99;
+    }
+    .fcell2{
+        order:3;
+    }
+    .fcell3{
+        order:2;
+    }
+    .fcell4{
+        order:1
+    }
+}
+
